@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&family=Montserrat:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Nav Bar */
+
+header h2 {
+    color: #000;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li:active {
+    transform: scale(.95);
+}
+
+.nav-list li a {
+    padding: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socialMedia img {
+    padding: 0 5px;
+}
+
+.instagram {
+    height: 25px;
+}
+
+.tweet {
+    height: 32px;
+}
+
+.facebook {
+    height: 26px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+    background: #B1AFFF;
+}
+
+.btn {
+    background: rgb(64, 104, 232);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    background: rgb(45, 82, 206);
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+/* Home Page  */
+
+.main{
+
+}
+
+.imgSlider {
+    position: relative;
+}
+
+.imgSlider .slide {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 91vh;
+    width: 100%;
+    position: absolute;
+}
+
+.imgSlider .slide img {
+    z-index: 1;
+    border-radius: 5px;
+    width: 65%;
+    height: 85%;
+}
+
+.imgSlider .slide .info {
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.imgSlider .slide .info h2 {
+    color: #fff;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.imgSlider .slide .info p {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.imgSlider .slide .navigation {
+    display: flex;
+    bottom: 25px;
+}
+
+.imgSlider .navigation .btn-h {
+    background: #000;
+    /* background: rgba(255, 255, 255, 0.5); */
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+/* Donation Page */
+
+.donation {
+    background: #C8FFD4;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Josefin Sans';
+}
+
+.donateContainer h1 {
+    padding-top: 35px;
+}
+
+.donateContainer.donatSections {
+    background: #867AE9;
+}
+
+.donateContainer .donateSections .section img {
+    height: 150px;
+    width: 200px;
+}
+
+/* About Page */
+
+.about-contain {
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background: #C8FFD4;
+}
+
+.about-contain h1 {
+    text-align: center;
+}
+
+.about-contain img {
+    border-radius: 15px;
+    border: 4px solid white;
+    height: 280px;
+}
+
+.about-text {
+    width: 100%;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.btn-n {
+    background: rgb(75, 30, 255);
+    color: white;
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.btn-n:active {
+    transform: scale(.95);
+}
+
+/* Contact Page */
+
+.contact-us {
+    height: 90vh;
+    background: #C8FFD4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactContent {
+    max-width: 100%;
+    text-align: center;
+}
+
+.contactContent h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.contactContent p {
+    font-weight: 600;
+}
+
+.contactContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer .contactInfo {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactContainer .contactInfo .box {
+    display: flex;
+}
+.contactContainer .contactInfo .box .text {
+    display: flex;
+    font-size: 16px;
+    margin-left: 30px;
+    flex-direction: column;
+}
+
+.contactForm {
+    width: 30%;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgb(161, 140, 255);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .7);
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input {
+    width: 100%;
+    padding: 8px 7px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+}
+
+#messagehere {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 7px;
+    resize: none;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+.btn-sm {
+    cursor: pointer;
+    background: #dc2323;
+    width: 100px;
+    color: #fff;
+    border: none;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 7px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .5);
+}
+
+.btn-sm:active {
+    transform: scale(.95);
+}
+
+@media (min-width: 320px) and (max-width: 1000px) {
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-list li a{
+        font-size: 14px;
+    }
+
+    .about-contain {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .about-contain img{
+        height: 240px;
+    }
+    
+    .aboutContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-us {
+        width: 100%;
+        padding: 15px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactContainer {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .contactForm {
+        width: 80%;
+    }
+
+    .contactInfo{
+        width: 400px;
+        margin-bottom: 20px;
+    }
+}
