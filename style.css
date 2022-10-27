@@ -16,7 +16,7 @@
 /* Nav Bar */
 
 header h2 {
-    color: #000;
+    color: #fff;
 }
 
 .nav-list {
@@ -410,6 +410,17 @@ header {
     
     .nav-list li a{
         font-size: 10px;
+    }
+    
+    /* Donation */
+
+    .donation{
+        height: 100%;
+        margin: 20px 10px;
+    }
+
+    .donation .donateSections{
+        flex-direction: column;
     }
 
     .about-contain {
