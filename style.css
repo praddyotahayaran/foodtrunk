@@ -15,6 +15,15 @@
 
 /* Nav Bar */
 
+.menuIcons {
+    color: white;
+    display: none;
+}
+
+.menuIcons i:nth-child(2){
+    display: none;
+}
+
 header h2 {
     color: #fff;
 }
@@ -402,28 +411,79 @@ header {
 
 @media (min-width: 320px) and (max-width: 1000px) {
 
-    header {
+    h2{
+        font-size: 14px;
+    }
+
+    .socialMedia {
+        height: 10px;
+        width: 20px;
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100vh;
+        background: #000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.3s linear;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+    }
+
+    .navbar .nav-list {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
     }
-    
-    .nav-list li a{
-        font-size: 10px;
+
+    .menuIcons {
+        display: block;
+        z-index: 999;
     }
-    
+
+    .active .navbar {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+        z-index: 99;
+        
+    }
+
+    .active .menuIcons i:nth-child(1) {
+        display: none;
+    }
+
+    .active .menuIcons i:nth-child(2) {
+        display: block;
+        z-index: 99;
+    }
+
     /* Donation */
 
     .donation{
         height: 100%;
-        margin: 20px 10px;
+        margin: 10px 20px;
     }
 
     .donation .donateSections{
         flex-direction: column;
     }
 
-    /* About Page */
+    /* About */
 
     .about-contain {
         height: 100%;
@@ -471,7 +531,7 @@ header {
         width: 80%;
     }
 
-    .contactInfo{
+    .contactInfo {
         width: 400px;
         margin-bottom: 20px;
     }
