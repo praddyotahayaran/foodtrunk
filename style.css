@@ -423,8 +423,10 @@ header {
         flex-direction: column;
     }
 
+    /* About Page */
+
     .about-contain {
-        height: 100vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -432,12 +434,12 @@ header {
         margin: 10px;
     }
 
-    .about-contain img{
+    .about-contain img {
         height: 240px;
     }
-    
+
     .aboutContent {
-        margin-top: 50px;
+        margin-top: 10px;
         width: 100%;
         display: flex;
         align-items: center;
