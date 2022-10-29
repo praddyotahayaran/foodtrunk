@@ -22,35 +22,47 @@ body {
 }
 
 /* Nav Bar */
-
-.menuIcons {
-    color: white;
-    display: none;
+.navbar {
+    height: 8vh;
+    align-items: center;
+    background: #000;
+    display: flex;
+    justify-content: space-around;
 }
 
-.menuIcons i:nth-child(2){
-    display: none;
-}
-
-header h2 {
+.logo {
     color: #fff;
+    letter-spacing: 3px;
 }
 
 .nav-list {
-    display: flex;
+    width: 30%;
+    justify-content: space-between;
     list-style: none;
+    display: flex;
 }
 
 .nav-list li:active {
     transform: scale(.95);
 }
 
-.nav-list li a {
-    padding: 0 15px;
-    text-decoration: none;
+.nav-list a {
     color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
+    /* font-size: 17px; */
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease;
 }
 
 .socialMedia {
@@ -74,64 +86,6 @@ header h2 {
 .facebook {
     height: 26px;
 }
-
-header {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-    align-items: center;
-    background: #000;
-}
-
-/* Hamburger */
-
-.hamburger {
-    display: none;
-    position: relative;
-    z-index: 1;
-
-    user-select: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #fff;
-    border-radius: 6px;
-    z-index: 1;
-    transition: .4s;
-}
-
-.hamburger:hover span:nth-child(2) {
-    transform: translateX(10px);
-    background: rgb(25, 25, 185);
-}
-
-.hamburger.is-active span:nth-child(1) {
-    transform: translate(0px, -2px) rotate(45deg);
-}
-
-.hamburger.is-active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(15px);
-}
-
-.hamburger.is-active span:nth-child(3) {
-    transform: translate(-3px, 3px) rotate(-45deg);
-}
-
-.hamburger.is-active:hover span {
-    background: rgb(25, 25, 185);
-}
-
-
 /* Buttons */
 
 .btn {
