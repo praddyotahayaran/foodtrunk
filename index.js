@@ -1,8 +1,25 @@
-const menuIconsEl = document.querySelector(".menuIcons");
-const headerEl = document.querySelector(".header");
+const navslide = () => {
+    const burgerEl = document.querySelector('.burger');
+    const navEl = document.querySelector('.nav-list');
+    const navListEl = document.querySelectorAll('.nav-list li')
 
-const toggleEl = () =>{
-    headerEl.classList.toggle("active")
+    burgerEl.addEventListener('click', () => {
+        // Toggle Nav
+        navEl.classList.toggle('nav-active');
+        
+        // Animate Link
+        navListEl.forEach((list, index) => {
+            if (list.style.animation) {
+                list.style.animation = ''
+                
+            }else {
+                list.style.animation = `navListFade 0.5s ease forwards ${index / 7 + .4}s`;
+            }
+        })
+
+        // Burger Animation 
+        burgerEl.classList.toggle('toggle')
+    })
 }
 
-menuIconsEl.addEventListener("click", ()=> toggleEl())
+navslide()
