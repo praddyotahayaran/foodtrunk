@@ -360,71 +360,81 @@ header {
 
 @media (min-width: 320px) and (max-width: 1000px) {
 
-    h2{
-        font-size: 14px;
+    html {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+        /* NavBar */
+
+    .nav-list {
+        position: absolute;
+        right: 0px;
+        width: 35%;
+        top: 8vh;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        background: #000;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        border-radius: 0 0 0 10px;
+        z-index: 99;
+    }
+
+    .nav-list li {
+        opacity: 0;
+    }
+
+    .nav-list li a:hover {
+        background: #fff;
+        color: #000;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    @keyframes navListFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(+45deg) translate(-5px, -6px);
+
     }
 
     .socialMedia {
-        height: 10px;
-        width: 20px;
-        display: none;
-    }
-    
-    .header {
-        justify-content: flex-start;
-        gap: 2rem;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        background: #000;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        transform: translateY(100%);
-        transition: all 0.3s linear;
-
-        opacity: 1;
-        visibility: visible;
-        pointer-events: none;
-    }
-
-    .navbar .nav-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-    }
-
-    .menuIcons {
-        display: block;
-        z-index: 999;
-    }
-
-    .active .navbar {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translateX(0);
-        z-index: 99;
-        
-    }
-
-    .active .menuIcons i:nth-child(1) {
         display: none;
     }
 
-    .active .menuIcons i:nth-child(2) {
-        display: block;
-        z-index: 99;
-    }
 
     /* Donation */
 
