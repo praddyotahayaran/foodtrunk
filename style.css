@@ -321,7 +321,7 @@ body {
     .nav-list {
         position: absolute;
         right: 0px;
-        width: 35%;
+        width: 40%;
         top: 8vh;
         height: 10rem;
         display: flex;
