@@ -333,6 +333,7 @@ body {
         border-radius: 0 0 0 10px;
         z-index: 99;
         padding: 15px 0;
+        position: fixed;
     }
 
     .nav-list li {
