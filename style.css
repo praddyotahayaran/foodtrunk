@@ -306,7 +306,7 @@ body {
     transform: scale(.95);
 }
 
-@media (min-width: 320px) and (max-width: 1000px) {
+@media screen and (max-width: 1150px) {
 
     html {
         overflow-x: hidden;
