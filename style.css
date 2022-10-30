@@ -7,15 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html {
-    overflow-x: hidden;
-}
+/* NavBar */
 
-body {
-    overflow-x: hidden;
-}
-
-/* Nav Bar */
 .navbar {
     height: 8vh;
     align-items: center;
@@ -80,6 +73,7 @@ body {
 .facebook {
     height: 26px;
 }
+
 /* Buttons */
 
 .btn {
@@ -87,6 +81,9 @@ body {
     color: white;
     padding: 5px 15px;
     border-radius: 50px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
 }
 
 .btn:hover {
@@ -99,18 +96,70 @@ body {
 
 /* Home Page  */
 
-.main{
-
+.section {
+    padding: 5rem 0;
 }
 
+.homeSection {
+    position: relative;
+}
 
+/* .homeSection::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    width: 30%;
+    height: 50%;
+    z-index: -1;
+    background: rgb(222, 213, 255);
+} */
+
+.primaryHeading {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.homeContainer{
+    max-width: 80rem;
+    /* background: rgb(212, 190, 190); */
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.grid {
+    display: grid;
+    gap: 9.6rem;
+}
+
+.gridTwoColumn {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.para {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 2.1rem 0;
+}
+
+.homeImage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.homeImage img {
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, .2);
+    height: 31.2rem;
+    border-radius: 5px;
+}
 
 /* Donation Page */
 
 .donation {
     height: 90vh;
     text-align: center;
-    background: #C8FFD4;
     font-family: 'Josefin Sans';
     display: flex;
     justify-content: center;
@@ -137,12 +186,14 @@ body {
     height: 200px;
     border-radius: 50%;
     box-shadow: 0 8px 4px rgba(0, 0, 0, .4);
+
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, .7); */
 }
 
 /* About Page */
 
 .about-contain {
-    height: 92vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,7 +274,7 @@ body {
 }
 
 .contactContainer .contactInfo {
-    width: 45%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,6 +283,7 @@ body {
 .contactContainer .contactInfo .box {
     display: flex;
 }
+
 .contactContainer .contactInfo .box .text {
     display: flex;
     font-size: 16px;
@@ -306,18 +358,29 @@ body {
     transform: scale(.95);
 }
 
-@media screen and (max-width: 1150px) {
+/* Media Query */
+
+@media screen and (max-width: 1160px) {
 
     html {
         overflow-x: hidden;
-        position: relative;
+        /* position: relative; */
     }
 
     body {
         overflow-x: hidden;
     }
-        /* NavBar */
+    
+    .header {
+        overflow-x: hidden;
+    }
 
+    /* Home Page */
+
+
+    
+    /* NavBar */
+    
     .nav-list {
         position: absolute;
         right: 0px;
@@ -335,11 +398,11 @@ body {
         padding: 15px 0;
         position: fixed;
     }
-
+    
     .nav-list li {
         opacity: 0;
     }
-
+    
     .nav-list li a:hover {
         background: #fff;
         color: #000;
@@ -385,19 +448,18 @@ body {
         display: none;
     }
 
+    /* ********** Donation ********* */
 
-    /* Donation */
-
-    .donation{
+    .donation {
         height: 100%;
         margin: 10px 20px;
     }
 
-    .donation .donateSections{
+    .donation .donateSections {
         flex-direction: column;
     }
 
-    /* About */
+    /* ************ About *********** */
 
     .about-contain {
         height: 100%;
@@ -425,8 +487,14 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 10px;
     }
+}
 
+@media screen and (max-width: 1020px) {
+
+    /* ********* Contact Page ********* */
+    
     .contact-us {
         width: 100%;
         padding: 15px;
@@ -435,16 +503,18 @@ body {
         justify-content: center;
         align-items: center;
     }
-
+    
     .contactContainer {
-        flex-direction: column;
+        padding: 2.5rem 0;
+        flex-direction: column-reverse;
         width: 100vw;
+        gap: 4rem;
     }
-
+    
     .contactForm {
         width: 80%;
     }
-
+    
     .contactInfo {
         width: 400px;
         margin-bottom: 20px;
